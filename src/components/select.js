@@ -51,6 +51,7 @@ class Select extends Component {
         return (
             <Row
                 {...this.props}
+                labelClassName="is-normal"
                 htmlFor={this.props.id}
             >
                 {control}

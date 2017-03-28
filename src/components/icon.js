@@ -1,16 +1,12 @@
 import React, { PropTypes } from 'react';
+import classNames from 'classnames';
 
 const Icon = (props) => {
-    let classNames = [
-        'glyphicon',
-        'glyphicon-' + props.symbol
-    ];
-    if (props.className) {
-        classNames.push(props.className);
-    }
     return (
-        <span className={classNames.join(' ')} aria-hidden="true"></span>
-    );
+      <span className={classNames('icon', props.className)}>
+        <i className={classNames('fa', props.symbol)}></i>
+      </span>
+    )
 }
 
 Icon.propTypes = {
@@ -18,4 +14,7 @@ Icon.propTypes = {
     className: PropTypes.string
 };
 
+Icon.defaultProps = {
+  className: 'is-small'
+}
 export default Icon;

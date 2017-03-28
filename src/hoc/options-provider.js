@@ -43,7 +43,6 @@ OptionsProvider.defaultProps = {
     validateOnSubmit: false,
     validatePristine: false,
     rowClassName: '',
-    labelClassName: '',
     elementWrapperClassName: ''
 };
 

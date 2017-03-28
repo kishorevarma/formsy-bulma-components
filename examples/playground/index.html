@@ -5,10 +5,36 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Playground — formsy-react-components</title>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.0/css/bulma.css">
+        <script src="https://use.fontawesome.com/4d51b006da.js"></script>
         <style>
             .yellow {
                 background-color: #ffc;
+            }
+            fieldset {
+              min-width: 0;
+              padding: 0;
+              margin: 0;
+              border: 0;
+            }
+            legend {
+              display: block;
+              width: 100%;
+              padding: 0;
+              margin-bottom: 20px;
+              font-size: 21px;
+              line-height: inherit;
+              color: #333;
+              border: 0;
+              border-bottom: 1px solid #e5e5e5;
+            }
+            @media screen and (min-width: 769px) {
+              .field-label {
+                padding-top: 0
+              }
+              .field-label.is-normal {
+                padding-top: 0.375em;
+              }
             }
         </style>
         <!--[if lt IE 9]>

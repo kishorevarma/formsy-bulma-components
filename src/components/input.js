@@ -3,7 +3,6 @@ import debounce from 'lodash.debounce';
 import ComponentCommon from './component-common';
 import ErrorMessages from './error-messages';
 import Help from './help';
-import Icon from './icon';
 import InputControl from './controls/input';
 import InputGroup from './input-group';
 import Row from './row';
@@ -82,6 +81,7 @@ class Input extends Component {
                 onChange={this.handleChange}
                 onBlur={this.handleBlur}
                 ref={this.initElementRef}
+                showErrors={this.props.showErrors}
             />
         );
 
@@ -104,10 +104,10 @@ class Input extends Component {
         return (
             <Row
                 {...this.props}
+                labelClassName={this.props.labelClassName || "is-normal"}
                 htmlFor={this.props.id}
             >
                 {control}
-                {this.props.showErrors ? <Icon symbol="remove" className="form-control-feedback" /> : null}
                 {this.props.help ? <Help help={this.props.help} /> : null}
                 {this.props.showErrors ? <ErrorMessages messages={this.props.errorMessages} /> : null}
             </Row>
@@ -117,7 +117,7 @@ class Input extends Component {
 }
 
 let [ ...inputGroupPropTypes ] = InputControl.propTypes;
-delete inputGroupPropTypes.children; 
+delete inputGroupPropTypes.children;
 
 Input.propTypes = {
     ...InputControl.propTypes,

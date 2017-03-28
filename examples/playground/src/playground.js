@@ -1,7 +1,7 @@
 /* eslint-env node, browser */
 
 import React, { PropTypes } from 'react';
-import FRC from 'formsy-react-components';
+import FRC from '../../../src/main';
 
 const { Checkbox, CheckboxGroup, Input, RadioGroup, Row, Select, File, Textarea } = FRC;
 
@@ -237,9 +237,9 @@ const Playground = (props) => {
                     value=""
                     label="Label and element wrapper"
                     type="text"
-                    placeholder="Label is ‘col-sm-5’, element-wrapper is ‘col-sm-7’"
-                    labelClassName={[{'col-sm-3': false}, 'col-sm-5']}
-                    elementWrapperClassName={[{'col-sm-9': false}, 'col-sm-7']}
+                    placeholder="Label is ‘is-small’, element-wrapper is 'is-narrow'"
+                    labelClassName={['is-small']}
+                    elementWrapperClassName={['is-narrow']}
                     help="The label and element-wrapper classes can be changed."
                 />
             </fieldset>
@@ -261,35 +261,53 @@ const Playground = (props) => {
                     value=""
                     label="Add-on before"
                     type="text"
-                    addonBefore={<span className="glyphicon glyphicon-search"></span>}
+                    addonBefore={
+                      <span className="select">
+                        <select>
+                          <option>$</option>
+                          <option>£</option>
+                          <option>€</option>
+                        </select>
+                      </span>
+                    }
                 />
                 <Input
                     name="addon-after"
                     value=""
                     label="Add-on after"
                     type="text"
-                    addonAfter={<span className="glyphicon glyphicon-search"></span>}
+                    controlClassName="is-expanded"
+                    addonAfter={
+                      <span className="select">
+                        <select>
+                          <option>$</option>
+                          <option>£</option>
+                          <option>€</option>
+                        </select>
+                      </span>
+                    }
                 />
                 <Input
                     name="button-before"
                     value=""
                     label="Button before"
                     type="text"
-                    buttonBefore={<button className="btn btn-default" type="button">Go!</button>}
+                    addonBefore={<button className="button" type="button">Go!</button>}
                 />
                 <Input
                     name="button-after"
                     value=""
                     label="Button after"
                     type="text"
-                    buttonAfter={<button className="btn btn-default" type="button">Go!</button>}
+                    controlClassName="is-expanded"
+                    addonAfter={<button className="button" type="button">Go!</button>}
                 />
             </fieldset>
             <fieldset>
                 <Row layout={layoutChoice}>
-                    <input className="btn btn-default" onClick={resetForm} type="reset" defaultValue="Reset" />
+                    <input className="button" onClick={resetForm} type="reset" defaultValue="Reset" />
                     {' '}
-                    <input className="btn btn-primary" formNoValidate={true} type="submit" defaultValue="Submit" />
+                    <input className="button is-primary" formNoValidate={true} type="submit" defaultValue="Submit" />
                 </Row>
             </fieldset>
         </FRC.Form>

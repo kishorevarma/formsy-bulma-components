@@ -5,26 +5,16 @@ import Label from './label';
 
 const Row = (props) => {
 
-    const { elementWrapperClassName, required, rowClassName, showErrors, layout, label } = props;
+    const { elementWrapperClassName, required, labelClassName, rowClassName, layout, label } = props;
 
     let element = props.children;
 
     if (layout === 'elementOnly') {
-        return (
-            <span>
-                {element}
-            </span>
-        );
-    }
-
-    let cssClasses = {
-        row: ['form-group'],
-        elementWrapper: []
-    };
-
-    if (showErrors) {
-        cssClasses.row.push('has-error');
-        cssClasses.row.push('has-feedback');
+      return (
+        <p className="conrol">
+            {element}
+        </p>
+      );
     }
 
     // We should render the label if there is label text defined, or if the
@@ -32,31 +22,25 @@ const Row = (props) => {
     const shouldRenderLabel = ((label !== null) || required);
 
     if (layout === 'horizontal') {
-
-        // Horizontal layout needs a 'row' class for Bootstrap 4
-        cssClasses.row.push('row');
-
-        if (!shouldRenderLabel) {
-            cssClasses.elementWrapper.push('col-sm-offset-3');
-        }
-
-        cssClasses.elementWrapper.push('col-sm-9');
-        cssClasses.elementWrapper.push(elementWrapperClassName);
-
-        element = (
-            <div className={classNames(cssClasses.elementWrapper)}>
+      return (
+        <div className={classNames("field","is-horizontal", rowClassName)}>
+          <div className={classNames("field-label", labelClassName)}>
+            {(shouldRenderLabel) ? <Label {...props} /> : null}
+          </div>
+          <div className="field-body">
+            <div className={classNames(["field", elementWrapperClassName])}>
                 {element}
             </div>
-        );
+          </div>
+        </div>
+      )
     }
 
-    cssClasses.row.push(rowClassName);
-
     return (
-        <div className={classNames(cssClasses.row)}>
-            {(shouldRenderLabel) ? <Label {...props} /> : null}
-            {element}
-        </div>
+      <div className={classNames("field", elementWrapperClassName)}>
+        {(shouldRenderLabel) ? <Label {...props} /> : null}
+        {element}
+      </div>
     );
 }
 
@@ -74,7 +58,6 @@ Row.propTypes = {
 Row.defaultProps = {
     label: null,
     rowClassName: '',
-    labelClassName: '',
     elementWrapperClassName: '',
     required: false,
     showErrors: false,

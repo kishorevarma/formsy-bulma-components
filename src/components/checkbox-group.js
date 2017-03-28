@@ -58,13 +58,12 @@ class CheckboxGroup extends Component {
         }
 
         return (
-            <Row
-                {...this.props}
-                fakeLabel={true}
-            >
+            <Row {...this.props}>
+              <div className="is-flex" style={{flexDirection: 'column'}}>
                 {element}
                 {this.props.help ? <Help help={this.props.help} /> : null}
                 {this.props.showErrors ? <ErrorMessages messages={this.props.errorMessages} /> : null}
+              </div>
             </Row>
         );
     }

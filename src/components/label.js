@@ -11,8 +11,7 @@ const Label = (props) => {
     }
 
     let labelClassNames = classNames([
-        'control-label',
-        (layout === 'horizontal') ? 'col-sm-3' : '',
+        'label',
         labelClassName
     ]);
 
@@ -32,7 +31,7 @@ const Label = (props) => {
 
     return (
         <label
-            className={labelClassNames}
+            className="label"
             data-required={required}
             htmlFor={htmlFor}
         >

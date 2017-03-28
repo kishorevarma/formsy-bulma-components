@@ -62,13 +62,18 @@ class SelectControl extends Component {
         delete selectProps.options;
 
         return (
-            <select
-                className="form-control"
+          <div className="control">
+            <div className="select" style={{height: 'auto'}}>
+              <select
+                className="select"
                 {...selectProps}
                 ref={this.initElementRef}
-            >
+                style={{height: 'auto'}}
+              >
                 {optionNodes}
-            </select>
+              </select>
+            </div>
+          </div>
         );
     }
 }

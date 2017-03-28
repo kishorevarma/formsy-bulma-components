@@ -10,26 +10,15 @@ const InputGroup = (props) => {
             return null;
         }
         return (
-            <span className="input-group-addon">{addon}</span>
-        );
-    }
-
-    const renderButton = (button) => {
-        if (!button) {
-            return null;
-        }
-        return (
-            <span className="input-group-btn">{button}</span>
+            <p className="contorl">{addon}</p>
         );
     }
 
     return (
-        <div className="input-group">
+        <div className="field has-addons">
             {renderAddon(props.addonBefore)}
-            {renderButton(props.buttonBefore)}
             {props.children}
             {renderAddon(props.addonAfter)}
-            {renderButton(props.buttonAfter)}
         </div>
     );
 }

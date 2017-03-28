@@ -16,7 +16,7 @@ TextareaControl.propTypes = {
 }
 
 TextareaControl.defaultProps = {
-    className: 'form-control',
+    className: 'textarea',
     cols: 0, // React doesn't render the cols attribute if it is zero
     rows: 3,
     value: ''

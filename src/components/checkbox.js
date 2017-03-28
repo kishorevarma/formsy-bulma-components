@@ -25,8 +25,8 @@ class Checkbox extends Component {
         delete inputProps.valueLabel;
         delete inputProps.label;
         return (
-            <div className="checkbox">
-                <label>
+            <div className="control">
+                <label className="checkbox">
                     <input
                         {...inputProps}
                         type="checkbox"
@@ -50,7 +50,6 @@ class Checkbox extends Component {
         return (
             <Row
                 {...this.props}
-                fakeLabel={true}
                 htmlFor={this.props.id}
             >
                 {element}

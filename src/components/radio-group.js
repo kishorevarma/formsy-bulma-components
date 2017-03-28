@@ -25,7 +25,7 @@ class RadioGroup extends Component {
             let className = 'radio' + (disabled ? ' disabled' : '');
             if (this.props.type === 'inline') {
                 return (
-                    <label className="radio-inline" key={key}>
+                    <label className="radio" key={key}>
                         <input
                             ref={(input) => { this.elements[radio.value] = input }}
                             checked={checked}
@@ -52,7 +52,11 @@ class RadioGroup extends Component {
                 </div>
             );
         });
-        return controls;
+        return (
+          <div className="contorl">
+            {controls}
+          </div>
+        )
     }
 
     render() {
@@ -67,8 +71,7 @@ class RadioGroup extends Component {
 
         return (
             <Row
-                {...this.props}
-                fakeLabel={true}
+              {...this.props}
             >
                 {element}
                 {this.props.help ? <Help help={this.props.help} /> : null}
