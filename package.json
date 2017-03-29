@@ -1,7 +1,7 @@
 {
   "name": "formsy-bulma-components",
-  "version": "1.0.0",
-  "description": "A set of React JS components for use in a formsy-react form. Markup adheres to Bulma structure.",
+  "version": "1.0.1",
+  "description": "A set of React JS components for use in a formsy-react form. Markup adheres to Bulma 0.4.0 structure.",
   "scripts": {
     "test": "jest",
     "test:watch": "jest --watch",
@@ -18,7 +18,7 @@
   "main": "./release/main.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/twisty/formsy-react-components.git"
+    "url": "https://github.com/kishorevarma/formsy-bulma-components.git"
   },
   "keywords": [
     "react",
@@ -29,7 +29,7 @@
   "author": "kishorevarma.n@gmail.com <kishorevarma.n@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/twisty/formsy-react-components/issues"
+    "url": "https://github.com/kishorevarma/formsy-bulma-components.git"
   },
   "jest": {
     "testRegex": "/__tests__/.*\\-test\\.js$"
