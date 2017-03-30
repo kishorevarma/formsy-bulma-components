@@ -1,5 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import debounce from 'lodash.debounce';
+import classNames from 'classnames';
 import ComponentCommon from './component-common';
 import ErrorMessages from './error-messages';
 import Help from './help';
@@ -104,7 +105,7 @@ class Input extends Component {
         return (
             <Row
                 {...this.props}
-                labelClassName={this.props.labelClassName || "is-normal"}
+                labelClassName={classNames(this.props.labelClassName,"is-normal")}
                 htmlFor={this.props.id}
             >
                 {control}
