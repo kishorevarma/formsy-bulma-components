@@ -14,5 +14,7 @@
  yarn examples
  ```
  
+example [demo](https://kishorevarma.github.io/formsy-bulma-components/playground/)
+
  Its a fork of [formsy-react-components](https://github.com/twisty/formsy-react-components) to use with bulma framework
  [Documentation](https://github.com/twisty/formsy-react-components)
