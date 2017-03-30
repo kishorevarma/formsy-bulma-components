@@ -2,8 +2,8 @@
 
 You can try-out the following examples:
 
-1. [Playground](https://kishorevarma.github.io/formsy-react-components/playground/) ([source](./playground/))
-2. [Refs](https://kishorevarma.github.io/formsy-react-components/refs/) ([source](./refs/))
+1. [Playground](https://kishorevarma.github.io/formsy-bulma-components/playground/) ([source](./playground/))
+2. [Refs](https://kishorevarma.github.io/formsy-bulma-components/refs/) ([source](./refs/))
 
 ---
 
