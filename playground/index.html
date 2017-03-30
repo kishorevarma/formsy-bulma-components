@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Playground — formsy-react-components</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.0/css/bulma.css">
+        <script src="https://use.fontawesome.com/4d51b006da.js"></script>
+        <style>
+            .yellow {
+                background-color: #ffc;
+            }
+            fieldset {
+              min-width: 0;
+              padding: 0;
+              margin: 0;
+              border: 0;
+            }
+            legend {
+              display: block;
+              width: 100%;
+              padding: 0;
+              margin-bottom: 20px;
+              font-size: 21px;
+              line-height: inherit;
+              color: #333;
+              border: 0;
+              border-bottom: 1px solid #e5e5e5;
+            }
+            @media screen and (min-width: 769px) {
+              .field-label {
+                padding-top: 0
+              }
+              .field-label.is-normal {
+                padding-top: 0.375em;
+              }
+            }
+        </style>
+        <!--[if lt IE 9]>
+            <script>
+                (function(){
+                    var ef = function(){};
+                    window.console = window.console || {log:ef,warn:ef,error:ef,dir:ef};
+                }());
+            </script>
+            <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
+            <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv-printshiv.min.js"></script>
+            <script src="//cdnjs.cloudflare.com/ajax/libs/es5-shim/3.4.0/es5-shim.js"></script>
+            <script src="//cdnjs.cloudflare.com/ajax/libs/es5-shim/3.4.0/es5-sham.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+        <div class="container" id="root"></div>
+        <script src="../build/playground.js"></script>
+    </body>
+</html>
