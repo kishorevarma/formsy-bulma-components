@@ -1,6 +1,6 @@
 {
   "name": "formsy-bulma-components",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A set of React JS components for use in a formsy-react form. Markup adheres to Bulma 0.4.0 structure.",
   "scripts": {
     "test": "jest",
