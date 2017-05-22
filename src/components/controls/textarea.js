@@ -1,16 +1,15 @@
-import React, { PropTypes } from 'react';
+import React, { PropTypes, Component } from 'react';
 import ControlCommon from './control-common';
 
-const TextareaControl = props => {
-  return (
-    <textarea
-      {...props}
-      ref={element => {
-        this.element = element;
-      }}
-    />
-  );
-};
+class TextareaControl extends Component {
+  initElementRef = element => {
+    this.element = element;
+  };
+
+  render() {
+    return <textarea {...this.props} ref={this.initElementRef} />;
+  }
+}
 
 TextareaControl.propTypes = {
   ...ControlCommon.propTypes,
