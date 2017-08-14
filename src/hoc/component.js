@@ -115,30 +115,30 @@ const FormsyReactComponent = (ComposedComponent) => {
             };
 
             // Formsy HOC props we don't use.
-            delete props.getErrorMessage;
-            delete props.getErrorMessages;
-            delete props.getValue;
-            delete props.hasValue;
-            delete props.isFormDisabled;
-            delete props.isFormSubmitted;
-            delete props.isPristine;
-            delete props.isRequired;
-            delete props.isValid;
-            delete props.isValidValue;
-            delete props.resetValue;
-            delete props.setValidations;
-            delete props.setValue;
-            delete props.showError;
-            delete props.showRequired;
+            // delete props.getErrorMessage;
+            // delete props.getErrorMessages;
+            // delete props.getValue;
+            // delete props.hasValue;
+            // delete props.isFormDisabled;
+            // delete props.isFormSubmitted;
+            // delete props.isPristine;
+            // delete props.isRequired;
+            // delete props.isValid;
+            // delete props.isValidValue;
+            // delete props.resetValue;
+            // delete props.setValidations;
+            // delete props.setValue;
+            // delete props.showError;
+            // delete props.showRequired;
 
-            // Formsy props we don't use
-            delete props.validationError;
-            delete props.validationErrors;
-            delete props.validations;
+            // // Formsy props we don't use
+            // delete props.validationError;
+            // delete props.validationErrors;
+            // delete props.validations;
 
-            // HOC refs
-            delete props.innerRef;
-            delete props.componentRef;
+            // // HOC refs
+            // delete props.innerRef;
+            // delete props.componentRef;
 
             return (
                 <ComposedComponent
