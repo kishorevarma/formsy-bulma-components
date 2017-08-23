@@ -24,9 +24,11 @@ class Input extends Component {
 
   componentWillReceiveProps = nextProps => {
     const isValueChanging = nextProps.value !== this.props.value;
-    if (isValueChanging) {
+    const isPristine = nextProps.isPristine();
+
+    if (isValueChanging || isPristine) {
       this.setState({ value: nextProps.value });
-      !nextProps.isPristine() && this.props.onSetValue(nextProps.value);
+      !isPristine && this.props.onSetValue(nextProps.value);
     }
   };
 
