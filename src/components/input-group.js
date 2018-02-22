@@ -4,18 +4,12 @@ import React, { PropTypes } from 'react';
  * Wraps an input to implement a Bootstrap [Input Group](http://getbootstrap.com/components/#input-groups)
  */
 const InputGroup = props => {
-  const renderAddon = addon => {
-    if (!addon) {
-      return null;
-    }
-    return <div className="contorl">{addon}</div>;
-  };
-
+  const { addonBefore, addonAfter } = props;
   return (
     <div className="field has-addons">
-      {renderAddon(props.addonBefore)}
+      {addonBefore ? addonBefore : null}
       {props.children}
-      {renderAddon(props.addonAfter)}
+      {addonAfter ? addonAfter : null}
     </div>
   );
 };
